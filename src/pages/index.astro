@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Form from '../components/FormHouse'
+import {Houses} from '../components/Card'
+---
+
+<Layout title="Welcome to Astro.">
+	<main class="bg-slate-500 h-screen">
+		<Houses client:only="react"/>
+		<div class="flex justify-center items-center mx-auto p-2 ">
+			<Form client:load/>
+		</div>
+		
+	</main>
+</Layout>
+
+<style>
+</style>
